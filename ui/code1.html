@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-high":"#282a2e","on-primary-fixed":"#000569","on-surface-variant":"#c6c5d7","primary-fixed-dim":"#bec2ff","error-container":"#93000a","outline-variant":"#454655","on-tertiary-fixed-variant":"#2a3f97","outline":"#8f8fa0","primary-container":"#5865f2","tertiary":"#b9c3ff","on-primary-fixed-variant":"#222fc2","on-primary-container":"#fffdff","on-tertiary":"#0c2680","surface-container-lowest":"#0c0e12","on-secondary-container":"#9db2ff","surface-container":"#1e2024","secondary":"#b6c4ff","on-background":"#e2e2e8","surface-container-highest":"#333539","secondary-container":"#28418e","on-surface":"#e2e2e8","surface-dim":"#111317","inverse-on-surface":"#2f3035","surface-container-low":"#1a1c20","inverse-surface":"#e2e2e8","error":"#ffb4ab","primary":"#bec2ff","on-secondary-fixed":"#00164f","secondary-fixed":"#dce1ff","on-primary":"#000da4","on-error":"#690005","tertiary-container":"#5c6fc9","background":"#111317","surface":"#111317","surface-bright":"#37393e","on-tertiary-container":"#fffdff","tertiary-fixed":"#dde1ff","surface-variant":"#333539","tertiary-fixed-dim":"#b9c3ff","surface-tint":"#bec2ff","secondary-fixed-dim":"#b6c4ff","on-error-container":"#ffdad6","on-secondary":"#092977","inverse-primary":"#3f4cda","on-tertiary-fixed":"#001257","on-secondary-fixed-variant":"#28418e","primary-fixed":"#e0e0ff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin":"1rem","margin-desktop":"2rem","space-md":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","margin-tablet":"1.5rem","space-2xl":"3rem","gutter":"1rem","gutter-desktop":"1.5rem","space-xs":"0.25rem","space-xl":"2rem"},fontFamily:{"label-sm":["JetBrains Mono"],"display-mobile":["Inter"],"headline-lg":["Inter"],"label-md":["JetBrains Mono"],"body-md":["Inter"],"display":["Inter"],"headline-lg-mobile":["Inter"],"body-lg":["Inter"],"headline-sm":["Inter"],"title-md":["Inter"]},fontSize:{"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"500"}],"display-mobile":["30px",{lineHeight:"38px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"body-md":["13px",{lineHeight:"20px",letterSpacing:"0em",fontWeight:"400"}],"display":["40px",{lineHeight:"48px",letterSpacing:"-0.03em",fontWeight:"700"}],"headline-lg-mobile":["22px",{lineHeight:"30px",letterSpacing:"-0.015em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"24px",letterSpacing:"-0.005em",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"-0.015em",fontWeight:"600"}],"title-md":["16px",{lineHeight:"24px",letterSpacing:"-0.01em",fontWeight:"600"}]}}}};</script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen selection:bg-primary-container selection:text-on-primary-container select-none"><header class="fixed top-0 left-0 right-0 h-14 bg-surface-container-lowest/80 backdrop-blur-2xl z-50 flex items-center justify-between px-space-md select-none"><div class="flex items-center gap-space-md flex-1"><div class="flex items-center gap-space-sm"><img alt="MoonBot Brand Glyph" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBTjLcrIygkcRgHg5eAYJ13ddxZ6XY58F6GLBaPkjVDLUAi1D0X5iowMgXyuYv1i6dI7EQwQMSk3Bxk6AceNREtnId_8FYSOGNIqXiqz3UPvEgqasr7butCKiuEocp5e9kxnzmmnsLBeSB2VQsZYu_u6bUJ9upeRGRWsO6_BBqk_caulyV8SRCoT9awwGgv398bCbGKI1GfFau2JYP3R4Rga-PuPMx23NCAqc3QMbs6"/><span class="font-title-md text-title-md text-on-surface tracking-tight font-semibold">MoonBot</span></div><div class="hidden lg:flex items-center gap-space-sm pl-space-md"><div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-high/60"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">Organic Chemistry II - CHM 322</span></div><div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-high/60"><span class="material-symbols-outlined text-[13px] text-primary">timer</span><span class="font-label-sm text-label-sm text-primary">42:15 Focus</span></div></div></div><div class="flex items-center gap-space-sm"><button class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-surface-container-low hover:bg-surface-container-high hover:text-on-surface text-on-surface-variant transition-colors" title="Soundscape preset" type="button"><span class="material-symbols-outlined text-[15px]">headphones</span><span class="font-label-sm text-label-sm">Binaural 40Hz</span></button><button class="p-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high hover:text-on-surface text-on-surface-variant transition-colors" title="Always-on-Top Pin" type="button"><span class="material-symbols-outlined text-[16px]">push_pin</span></button><div class="flex items-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Ps2YGOYP5YXlkaGIgMA4EZ5n4zN2YDtVeE24A2dEBqpssrDPVjLZve0Z2r7J2OpIWHacMgYLUbRYbhWFvmQRHhOeFJb6KmPm7zkqEGR9wPS8KgbVb9f-93D1VuTdwqzUl2h28-zwBmyryIPMbuRPMtDkN19UVD5DsOjC1Xv-D_pz0BsxBjBZaKN-wJhhW_Ym46wXkWaHFrYcGBuoljOSNzfvaYcHKWmoa0_l3u4"/></div><div class="flex items-center ml-space-sm bg-surface-container-lowest/40 rounded-lg overflow-hidden"><button class="w-9 h-9 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Minimize" type="button"><span class="material-symbols-outlined text-[14px]">minimize</span></button><button class="w-9 h-9 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Maximize" type="button"><span class="material-symbols-outlined text-[14px]">crop_square</span></button><button class="w-9 h-9 flex items-center justify-center text-on-surface-variant hover:bg-error-container hover:text-on-surface transition-colors" title="Close" type="button"><span class="material-symbols-outlined text-[14px]">close</span></button></div></div></header><aside class="fixed left-0 top-14 bottom-0 w-72 bg-surface-container-low/75 backdrop-blur-2xl z-40 flex flex-col justify-between p-space-md"><div class="flex flex-col gap-space-md"><div class="flex items-center justify-between px-space-sm py-space-xs bg-surface-container/60 rounded-xl"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[15px]">search</span><span class="font-body-md text-body-md">Raycast Query</span></div><span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant">Ctrl+K</span></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-xl"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="floating-orb-companion" href="#"><span class="material-symbols-outlined text-[18px]">blur_on</span><span class="font-body-md text-body-md">Floating Orb Companion</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 transition-all bg-primary-container text-on-primary-container font-semibold rounded-xl" data-path="study-dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span><span class="font-body-md text-body-md">Study Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="ask-and-learn" href="#"><span class="material-symbols-outlined text-[18px]">auto_awesome</span><span class="font-body-md text-body-md">Ask &amp; Learn</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="focus-pomodoro" href="#"><span class="material-symbols-outlined text-[18px]">hourglass_empty</span><span class="font-body-md text-body-md">Focus Pomodoro</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="academic-schedule" href="#"><span class="material-symbols-outlined text-[18px]">calendar_month</span><span class="font-body-md text-body-md">Academic Schedule</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="memory-vault" href="#"><span class="material-symbols-outlined text-[18px]">psychology</span><span class="font-body-md text-body-md">Memory Vault</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="analytics-and-trends" href="#"><span class="material-symbols-outlined text-[18px]">monitoring</span><span class="font-body-md text-body-md">Analytics &amp; Trends</span></a></nav></div><div class="pt-space-md flex flex-col gap-space-xs"><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface-container-lowest/60 text-on-surface-variant"><span class="font-label-sm text-label-sm">Quick Summon</span><span class="font-label-sm text-label-sm px-1 rounded bg-surface-container text-on-surface-variant">Ctrl+Space</span></div><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface-container-lowest/60 text-on-surface-variant"><span class="font-label-sm text-label-sm">Audio Engine</span><span class="font-label-sm text-label-sm text-primary">Active (40Hz)</span></div></div></aside><div class="pl-72"><main class="relative w-full pt-14 bg-surface min-h-screen px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Glowing Atmospheric Ambient Backdrops (Constrained) -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-48 right-10 w-80 h-80 bg-secondary-container/15 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Workspace Primary Canvas -->
+<div class="relative z-10 flex flex-col gap-space-lg">
+<!-- Workspace Top Command & Subject Bar -->
+<header class="flex flex-col md:flex-row md:items-center justify-between gap-space-md p-space-md rounded-xl bg-surface-container-low shadow-xl">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative flex items-center justify-center w-11 h-11 rounded-xl bg-surface-container shadow-inner">
+<svg class="w-8 h-8 drop-shadow-[0_0_12px_rgba(88,101,242,0.65)]" fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<path d="M50 8C26.8 8 8 26.8 8 50C8 73.2 26.8 92 50 92C68.9 92 84.8 79.5 89.9 62.4C63.2 62.4 41.6 40.8 41.6 14.1C41.6 11.9 42 9.9 42.4 8C44.9 8 50 8 50 8Z" fill="url(#bot_grad)"></path>
+<circle class="animate-pulse" cx="76" cy="30" fill="#BEC2FF" r="5"></circle>
+<defs>
+<lineargradient gradientunits="userSpaceOnUse" id="bot_grad" x1="8" x2="89.9" y1="8" y2="92">
+<stop stop-color="#5865F2"></stop>
+<stop offset="0.6" stop-color="#3F4CDA"></stop>
+<stop offset="1" stop-color="#28418E"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-title-md text-title-md text-on-surface truncate">Deep Focus: Cellular Neurobiology</span>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold tracking-wider">NEUR 401</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">HONORS ACCELERATED</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-space-xs mt-0.5">
+<span>Session #088</span>
+<span>•</span>
+<span class="text-primary">Synaptic Dynamics &amp; Patch Clamp Inversion</span>
+</p>
+</div>
+</div>
+<!-- Controls: Mica / Pin / Settings -->
+<div class="flex items-center gap-space-xs shrink-0 self-end md:self-auto">
+<div class="flex items-center bg-surface-container p-0.5 rounded-lg shadow-sm">
+<button class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-medium transition-all" title="Mica Dark Acrylic" type="button">Dark Mica</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium transition-colors" title="Mica Light Accent" type="button">Subtle Frost</button>
+</div>
+<button class="p-2 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high transition-colors" title="Float Pin Active" type="button">
+<span class="material-symbols-outlined text-[17px]" style="font-variation-settings: 'FILL' 1;">push_pin</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Workspace Parameters" type="button">
+<span class="material-symbols-outlined text-[17px]">tune</span>
+</button>
+</div>
+</header>
+<!-- Quick Stats Ribbon (Notion / Raycast Hybrid) -->
+<section class="grid grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Stat 1 -->
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container shadow-md hover:bg-surface-container-high transition-all">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">timelapse</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Focus Today</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">4h 32m</span>
+<span class="font-label-sm text-label-sm text-emerald-400 font-semibold">+18% avg</span>
+</div>
+</div>
+</div>
+<!-- Stat 2 -->
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container shadow-md hover:bg-surface-container-high transition-all">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">local_fire_department</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Current Streak</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">14 Days</span>
+<span class="font-label-sm text-label-sm text-primary font-medium">All-time peak</span>
+</div>
+</div>
+</div>
+<!-- Stat 3 -->
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container shadow-md hover:bg-surface-container-high transition-all">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[20px]">psychology</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Brain Fuel</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">88%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cognitive Peak</span>
+</div>
+</div>
+</div>
+<!-- Stat 4 -->
+<div class="flex items-center gap-space-md p-space-md rounded-xl bg-surface-container shadow-md hover:bg-surface-container-high transition-all group cursor-pointer">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-primary text-[20px] animate-pulse">waves</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">Soundscape</span>
+<span class="font-title-md text-title-md text-on-surface truncate">Kyoto Rain + 40Hz</span>
+</div>
+</div>
+</section>
+<!-- Raycast Global Command Bar Trigger -->
+<div class="relative w-full rounded-2xl bg-surface-container-low shadow-xl p-2 flex items-center gap-space-sm group cursor-pointer hover:bg-surface-container transition-all">
+<div class="flex items-center justify-center pl-space-sm text-primary">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface-variant placeholder:text-on-surface-variant cursor-pointer outline-none select-none" readonly="" type="text" value="Type / or press Ctrl+K to ask MoonBot, draft flashcards, solve formulas, or plan reviews..."/>
+<div class="flex items-center gap-space-xs pr-space-sm shrink-0">
+<kbd class="px-2 py-1 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm shadow-sm">Ctrl</kbd>
+<kbd class="px-2 py-1 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm shadow-sm">K</kbd>
+</div>
+</div>
+<!-- Main Asymmetric Bento Workspace Grid -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left Main Panel: Active Study Document & Notion Synthesis (7 Columns) -->
+<div class="xl:col-span-7 flex flex-col gap-space-lg">
+<!-- Active Study Context Document Card -->
+<div class="rounded-2xl bg-surface-container p-space-lg shadow-xl relative overflow-hidden flex flex-col gap-space-md">
+<!-- Document Meta Header -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-error-container/40 text-error flex items-center justify-center font-bold text-xs">PDF</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-semibold">Synaptic_Transmission_v3.pdf</h2>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span>Page 44 of 118</span>
+<span>•</span>
+<span class="text-emerald-400">Live OCR Synced</span>
+<span>•</span>
+<span>Direct Textbook Source</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Zoom in" type="button">
+<span class="material-symbols-outlined text-[16px]">zoom_in</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" title="Popout reader" type="button">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Visual Document Render & Live OCR Annotation Stream -->
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-space-md bg-surface-container-lowest/80 p-space-md rounded-xl">
+<!-- Micro Preview of Structural Slide -->
+<div class="sm:col-span-5 relative rounded-lg overflow-hidden h-44 bg-surface-container-high shadow-inner flex flex-col justify-end p-space-sm">
+<div class="absolute inset-0 bg-cover bg-center opacity-65 mix-blend-luminosity" data-alt="Detailed scientific molecular biology illustration of a synaptic bouton junction with vesicle fusion, neurotransmitter release into synaptic cleft, and postsynaptic ligand-gated receptors under ultraviolet scientific microscope illumination with cool indigo and cobalt glow." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoEEw6YWikVjPGf-ZnPAB3-rThq1U7X9PbVcbXw-AFV23FBOCNvWGSpv9rkKRmWxuVotfx37-hBbZdkMTzXtpkM-Z4K7rk3YbRFbXZcojRsQaoVKWj5iKRe7WRgYI5_2CDQtlQo0C9CwtA-PlFCpDMTnSFsabzw_FVMW83JkwnaC80k-t2owAEzuaCke1pgNbsp6uzSevoUhLc5bBYpRCUe4ExfxxhlH-346Gl8ow')"></div>
+<div class="relative z-10 p-2 rounded bg-surface-container-lowest/90 backdrop-blur-md">
+<p class="font-label-sm text-label-sm text-primary font-mono truncate">Fig 4.12: Presynaptic Active Zone</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">SNARE-complex dependent fusion</p>
+</div>
+</div>
+<!-- Live OCR Extract Stream -->
+<div class="sm:col-span-7 flex flex-col justify-between gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Live OCR Extraction</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary-container/20 text-primary">High Fidelity (99.4%)</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-high/60 font-mono text-[11px] leading-relaxed text-on-surface-variant selection:bg-primary-container selection:text-on-primary-container">
+<span class="text-primary font-semibold">[00:44:12]</span> "Upon arrival of the <span class="bg-primary-container/30 text-on-surface px-1 rounded">action potential</span> at the presynaptic terminal, voltage-gated <span class="bg-primary-container/30 text-on-surface px-1 rounded">Ca2+ channels</span> activate, triggering synchronous exocytosis within 200 microseconds."
+                </div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex items-center gap-1 text-primary hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+<span>Append to Cornell Notes</span>
+</button>
+<button class="flex items-center gap-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[14px]">flash_on</span>
+<span>Generate Cloze Card</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Instant Synthesis Notion-Style Callout Box -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-6 h-6 rounded-md bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px]">neurology</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-semibold">MoonBot Instant Synthesis</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary">Context Aware Model</span>
+</div>
+<ul class="flex flex-col gap-space-xs text-on-surface-variant font-body-md text-body-md pl-1">
+<li class="flex items-start gap-space-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+<span><strong class="text-on-surface">Vesicular Release:</strong> Synaptotagmin acts as the primary calcium sensor initiating pore dilation with syntaxin-1 and SNAP-25.</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+<span><strong class="text-on-surface">Kinetic Delay:</strong> Calcium diffusion gradient causes a standard 0.5ms synaptic lag between spike peak and EPSP onset.</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+<span><strong class="text-on-surface">Pharmacological Target:</strong> Botulinum toxin cleaves specific SNARE motifs, preventing neurotransmitter exocytosis permanently.</span>
+</li>
+</ul>
+</div>
+<!-- Document Card Footer Action Pills -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-highest text-on-surface">Synapse</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-highest text-on-surface">SNARE Complex</span>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-container-highest text-on-surface">Vesicle Fusion</span>
+</div>
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-all flex items-center gap-space-xs shadow-md" type="button">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+<span>Deep Query Document</span>
+</button>
+</div>
+</div>
+<!-- Recent Concepts Saved (Notion Table View) -->
+<div class="rounded-2xl bg-surface-container p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">database</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Recent Concepts in Vault</h3>
+</div>
+<a class="font-label-sm text-label-sm text-primary hover:underline flex items-center gap-0.5" href="#">
+<span>View All 240 Nodes</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+<!-- Notion Row 1 -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[17px]">electric_bolt</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-medium truncate">Action Potential Propagation</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hodgkin-Huxley differential mathematical formulation</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<span class="hidden sm:inline-block font-label-sm text-label-sm px-2 py-0.5 rounded bg-primary-container/20 text-primary">Biophysics</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">98% Mastery</span>
+</div>
+</div>
+<!-- Notion Row 2 -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[17px]">adjust</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-medium truncate">Voltage-Gated Na+ Channels</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Inactivation ball-and-chain peptide motif</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<span class="hidden sm:inline-block font-label-sm text-label-sm px-2 py-0.5 rounded bg-secondary-container/40 text-secondary">Electrophys</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">82% Mastery</span>
+</div>
+</div>
+<!-- Notion Row 3 -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[17px]">shield</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-medium truncate">GABA-A Receptor Complex</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pentameric chloride ionophore hyperpolarization</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0">
+<span class="hidden sm:inline-block font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-highest text-tertiary">Pharm</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">74% Review Today</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side Panel: Interactive Pomodoro Timer & Milestones (5 Columns) -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<!-- Interactive Pomodoro Mini-Widget -->
+<div class="rounded-2xl bg-surface-container p-space-lg shadow-xl relative overflow-hidden flex flex-col items-center justify-center text-center">
+<div class="w-full flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">hourglass_top</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Focus Pomodoro #3</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-emerald-400/20 text-emerald-300 font-mono">25m Block</span>
+</div>
+<!-- Circular Timer SVG Visual -->
+<div class="relative w-52 h-52 my-space-sm flex items-center justify-center">
+<svg class="w-full h-full -rotate-90 transform" viewbox="0 0 160 160">
+<!-- Track -->
+<circle class="text-surface-container-high" cx="80" cy="80" fill="transparent" r="68" stroke="currentColor" stroke-width="8"></circle>
+<!-- Active Arc -->
+<circle class="text-primary transition-all duration-1000 ease-linear drop-shadow-[0_0_8px_rgba(88,101,242,0.8)]" cx="80" cy="80" fill="transparent" id="pomo-track" r="68" stroke="currentColor" stroke-dasharray="427.25" stroke-dashoffset="18" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<!-- Central Digital Readout -->
+<div class="absolute inset-0 flex flex-col items-center justify-center select-none">
+<span class="font-display text-display font-bold tracking-tight text-on-surface font-mono" id="pomo-display">24:38</span>
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">Deep Focus</span>
+</div>
+</div>
+<!-- Primary Control Buttons -->
+<div class="flex items-center gap-space-sm mt-space-sm w-full max-w-xs justify-center">
+<button class="flex-1 py-2 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-semibold hover:bg-primary hover:text-on-primary transition-all flex items-center justify-center gap-1.5 shadow-lg shadow-primary-container/25" id="pomo-toggle" type="button">
+<span class="material-symbols-outlined text-[18px]">pause</span>
+<span>Pause</span>
+</button>
+<button class="px-3 py-2 rounded-xl bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-label-sm text-label-sm font-semibold" id="pomo-add" title="Add 5 Minutes" type="button">
+                +5m
+              </button>
+<button class="px-3 py-2 rounded-xl bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors font-label-sm text-label-sm font-semibold" id="pomo-break" title="Skip to Break" type="button">
+<span class="material-symbols-outlined text-[16px]">coffee</span>
+</button>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-space-md">
+              Next break: 5 min stretch + hydration interval
+            </p>
+</div>
+<!-- Today's Urgent Milestones -->
+<div class="rounded-2xl bg-surface-container p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">event_upcoming</span>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Today's Urgent Milestones</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 Critical</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Urgent Item 1 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-2 h-10 rounded-full bg-primary shrink-0"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-medium truncate">Midterm Prep: Synapse Kinetics</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Lab Building B • Room 304</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-label-md text-label-md text-primary font-mono font-semibold">16:00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">in 1h 45m</span>
+</div>
+</div>
+<!-- Urgent Item 2 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-2 h-10 rounded-full bg-error shrink-0"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-medium truncate">Problem Set 4: Cable Theory</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Canvas Portal Submission</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-label-md text-label-md text-error font-mono font-semibold">23:59</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hard Deadline</span>
+</div>
+</div>
+<!-- Urgent Item 3 -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-2 h-10 rounded-full bg-tertiary shrink-0"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-medium truncate">Quiz Review: Reversal Potentials</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Study Cohort Discord Call</span>
+</div>
+</div>
+<div class="flex flex-col items-end shrink-0 pl-2">
+<span class="font-label-md text-label-md text-tertiary font-mono font-semibold">09:00</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tomorrow</span>
+</div>
+</div>
+</div>
+<!-- Quick Add Task -->
+<button class="w-full py-2 rounded-xl bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all flex items-center justify-center gap-1 font-label-sm text-label-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+<span>Schedule Milestone Review</span>
+</button>
+</div>
+<!-- Ambient Audio Tuner Widget -->
+<div class="p-space-md rounded-2xl bg-surface-container shadow-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">graphic_eq</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Binaural Resonator</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Gamma Wave Entrainment</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-3/4 h-full bg-primary rounded-full"></div>
+</div>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+    (function() {
+      // Interactive Pomodoro timer micro-interaction
+      let secondsLeft = 24 * 60 + 38;
+      let isRunning = true;
+      const display = document.getElementById('pomo-display');
+      const toggleBtn = document.getElementById('pomo-toggle');
+      const addBtn = document.getElementById('pomo-add');
+      const breakBtn = document.getElementById('pomo-break');
+      const circleTrack = document.getElementById('pomo-track');
+      const totalSeconds = 25 * 60;
+      const circumference = 427.25;
+
+      function updateDisplay() {
+        if (!display) return;
+        const mins = Math.floor(secondsLeft / 60);
+        const secs = secondsLeft % 60;
+        display.textContent = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        
+        if (circleTrack) {
+          const ratio = secondsLeft / totalSeconds;
+          const offset = circumference * (1 - ratio);
+          circleTrack.style.strokeDashoffset = offset;
+        }
+      }
+
+      const timerInterval = setInterval(() => {
+        if (isRunning && secondsLeft > 0) {
+          secondsLeft--;
+          updateDisplay();
+        }
+      }, 1000);
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          isRunning = !isRunning;
+          toggleBtn.innerHTML = isRunning 
+            ? `<span class="material-symbols-outlined text-[18px]">pause</span><span>Pause</span>`
+            : `<span class="material-symbols-outlined text-[18px]">play_arrow</span><span>Resume</span>`;
+        });
+      }
+
+      if (addBtn) {
+        addBtn.addEventListener('click', () => {
+          secondsLeft += 300;
+          updateDisplay();
+        });
+      }
+
+      if (breakBtn) {
+        breakBtn.addEventListener('click', () => {
+          secondsLeft = 5 * 60;
+          isRunning = false;
+          if (toggleBtn) {
+            toggleBtn.innerHTML = `<span class="material-symbols-outlined text-[18px]">play_arrow</span><span>Start Break</span>`;
+          }
+          updateDisplay();
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

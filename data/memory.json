@@ -1,0 +1,59 @@
+{
+  "saved_concepts": [
+    {
+      "id": "mem-db591138",
+      "title": "Paxos Consensus",
+      "course_or_topic": "General",
+      "query": "",
+      "explanation": "Leader election protocol",
+      "formula": "",
+      "reference_links": [],
+      "quiz": {},
+      "created_at": "2026-11-23T19:36:39.388802"
+    },
+    {
+      "id": "mem-seed-1",
+      "title": "Chemiosmotic Coupling & Proton-Motive Force",
+      "course_or_topic": "Bioenergetics / Biophysics",
+      "query": "Explain Chemiosmotic Hypothesis and ATP Synthase Proton Gradient",
+      "explanation": "The chemiosmotic hypothesis describes how electrochemical proton gradients across the inner mitochondrial membrane drive ATP synthesis via ATP synthase (F0-F1 rotor complex).",
+      "formula": "Δp = Δψ - (2.303 RT / F) ΔpH",
+      "reference_links": [
+        {
+          "title": "Wikipedia - Chemiosmosis",
+          "url": "https://en.wikipedia.org/wiki/Chemiosmosis"
+        },
+        {
+          "title": "NCBI Bookshelf - Bioenergetics",
+          "url": "https://www.ncbi.nlm.nih.gov/books/NBK21154/"
+        }
+      ],
+      "quiz": {
+        "question": "What happens to ATP synthesis if the inner membrane becomes permeable to protons?",
+        "options": [
+          "ATP synthesis accelerates exponentially",
+          "Proton gradient dissipates as heat; ATP synthesis halts",
+          "ATP synthase reverses direction and pumps protons back",
+          "Membrane potential increases"
+        ],
+        "correct_index": 1,
+        "explanation": "Uncouplers like DNP collapse the proton gradient, converting potential energy into heat."
+      },
+      "created_at": "2026-11-23T19:25:41.934807"
+    }
+  ],
+  "quick_notes": [
+    {
+      "id": "note-seed-1",
+      "title": "Amdahl's Law Formula",
+      "content": "Speedup = 1 / ((1 - P) + (P / S)), where P is parallel fraction and S is speedup of parallel part.",
+      "tags": [
+        "CSE312",
+        "Hardware",
+        "Formulas"
+      ],
+      "created_at": "2026-11-23T19:25:41.934807"
+    }
+  ],
+  "history": []
+}

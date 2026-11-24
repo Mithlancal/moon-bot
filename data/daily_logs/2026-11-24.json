@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-24",
+  "study_sessions": [],
+  "activity_spans": [
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "start_time": "2026-11-24T15:29:56.711220",
+      "end_time": "2026-11-24T15:30:02.831426",
+      "duration_sec": 6
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot — Deep Study Sanctuary",
+      "category": "Other / System",
+      "start_time": "2026-11-24T15:30:02.952111",
+      "end_time": "2026-11-24T15:30:08.956637",
+      "duration_sec": 6
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "start_time": "2026-11-24T15:30:09.087531",
+      "end_time": "2026-11-24T15:30:15.090138",
+      "duration_sec": 6
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot — Deep Study Sanctuary",
+      "category": "Other / System",
+      "start_time": "2026-11-24T15:30:15.138430",
+      "end_time": "2026-11-24T15:30:57.170783",
+      "duration_sec": 42
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot — Deep Study Sanctuary",
+      "category": "Other / System",
+      "start_time": "2026-11-24T15:30:57.852141",
+      "end_time": "2026-11-24T15:31:07.930909",
+      "duration_sec": 11
+    }
+  ],
+  "events": [],
+  "app_sessions": [
+    {
+      "session_id": "app-f3b5af30",
+      "start_time": "2026-11-24T15:29:53.343844",
+      "end_time": "2026-11-24T15:31:12.354375",
+      "duration_sec": 79
+    }
+  ],
+  "summary": {
+    "total_study_sec": 0,
+    "total_active_sec": 71,
+    "total_moonbot_sec": 79,
+    "categories": {
+      "Other / System": 71
+    },
+    "apps": {
+      "python.exe": 71
+    },
+    "titles": {
+      "MoonBot HUD": 12,
+      "MoonBot — Deep Study Sanctuary": 59
+    }
+  }
+}

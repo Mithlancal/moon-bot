@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-23",
+  "study_sessions": [],
+  "activity_spans": [],
+  "events": [
+    {
+      "id": "evt-339decb4",
+      "timestamp": "2026-11-23T19:31:02.585336",
+      "event_type": "concept_lookup",
+      "title": "Lookup: Amdahl law in parallel computing",
+      "details": "Topic: General. Source: offline_fallback"
+    },
+    {
+      "id": "evt-e6d980b1",
+      "timestamp": "2026-11-23T19:36:39.310601",
+      "event_type": "emergency_reset",
+      "title": "Emergency Focus Reset",
+      "details": "Sprint interrupted on 'Deep Focus Sprint'. Cooldown break initiated."
+    }
+  ],
+  "summary": {
+    "total_study_sec": 0,
+    "total_active_sec": 0,
+    "categories": {},
+    "apps": {}
+  }
+}
