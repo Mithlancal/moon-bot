@@ -1,0 +1,1660 @@
+{
+  "date": "2026-11-25",
+  "study_sessions": [],
+  "activity_spans": [
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T00:42:10.456748",
+      "end_time": "2026-11-25T00:43:10.752157",
+      "duration_sec": 60
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T00:43:11.151104",
+      "end_time": "2026-11-25T00:44:11.374950",
+      "duration_sec": 61
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T00:44:11.766480",
+      "end_time": "2026-11-25T00:45:10.373179",
+      "duration_sec": 59
+    },
+    {
+      "app": "Idle / LockScreen",
+      "window_or_tab": "Screen Locked or No Active Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T00:45:11.063948",
+      "end_time": "2026-11-25T00:45:13.069146",
+      "duration_sec": 3
+    },
+    {
+      "app": "Idle / LockScreen",
+      "window_or_tab": "Screen Locked or No Active Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T00:45:13.185632",
+      "end_time": "2026-11-25T00:54:50.272196",
+      "duration_sec": 12
+    },
+    {
+      "app": "LockApp.exe",
+      "window_or_tab": "Windows Default Lock Screen",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T00:54:51.406660",
+      "end_time": "2026-11-25T00:54:53.419517",
+      "duration_sec": 3
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T00:54:53.454253",
+      "end_time": "2026-11-25T00:54:55.476222",
+      "duration_sec": 2
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T00:54:55.524087",
+      "end_time": "2026-11-25T00:55:11.582914",
+      "duration_sec": 16
+    },
+    {
+      "app": "OpenCode.exe",
+      "window_or_tab": "MoonBot desktop study companion · OpenCode",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T00:55:11.662823",
+      "end_time": "2026-11-25T00:55:15.679821",
+      "duration_sec": 4
+    },
+    {
+      "app": "brave.exe",
+      "window_or_tab": "Showdown! - Brave",
+      "category": "Browser / Research",
+      "site": "",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T00:55:15.816893",
+      "end_time": "2026-11-25T00:55:17.832438",
+      "duration_sec": 2
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T00:55:17.943350",
+      "end_time": "2026-11-25T00:55:19.952421",
+      "duration_sec": 2
+    },
+    {
+      "app": "Code.exe",
+      "window_or_tab": "main.py - moon-bot - Visual Studio Code",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T00:55:19.998858",
+      "end_time": "2026-11-25T00:55:22.018350",
+      "duration_sec": 2
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T00:55:22.355048",
+      "end_time": "2026-11-25T00:55:32.409985",
+      "duration_sec": 10
+    },
+    {
+      "app": "ShellExperienceHost.exe",
+      "window_or_tab": "Jump List for Python",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T00:55:32.599837",
+      "end_time": "2026-11-25T00:55:36.622023",
+      "duration_sec": 4
+    },
+    {
+      "app": "explorer.exe",
+      "window_or_tab": "Untitled Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T00:55:36.764426",
+      "end_time": "2026-11-25T00:55:38.767594",
+      "duration_sec": 2
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T06:38:12.395230",
+      "end_time": "2026-11-25T06:38:14.406273",
+      "duration_sec": 2
+    },
+    {
+      "app": "OpenCode.exe",
+      "window_or_tab": "MoonBot desktop study companion · OpenCode",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T06:38:14.450758",
+      "end_time": "2026-11-25T06:38:30.539171",
+      "duration_sec": 16
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T06:38:30.597664",
+      "end_time": "2026-11-25T06:38:32.605529",
+      "duration_sec": 2
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T06:38:32.008060",
+      "end_time": "2026-11-25T06:38:34.023091",
+      "duration_sec": 2
+    },
+    {
+      "app": "OpenCode.exe",
+      "window_or_tab": "MoonBot desktop study companion · OpenCode",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T06:38:32.709245",
+      "end_time": "2026-11-25T06:39:12.902566",
+      "duration_sec": 40
+    },
+    {
+      "app": "OpenCode.exe",
+      "window_or_tab": "MoonBot desktop study companion · OpenCode",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T06:38:34.389012",
+      "end_time": "2026-11-25T06:39:32.636108",
+      "duration_sec": 59
+    },
+    {
+      "app": "OpenCode.exe",
+      "window_or_tab": "MoonBot desktop study companion · OpenCode",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T06:39:13.037361",
+      "end_time": "2026-11-25T06:40:13.298090",
+      "duration_sec": 60
+    },
+    {
+      "app": "OpenCode.exe",
+      "window_or_tab": "MoonBot desktop study companion · OpenCode",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T06:39:33.070382",
+      "end_time": "2026-11-25T06:40:27.293226",
+      "duration_sec": 55
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "CTk",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T06:40:27.733524",
+      "end_time": "2026-11-25T06:40:29.735363",
+      "duration_sec": 2
+    },
+    {
+      "app": "OpenCode.exe",
+      "window_or_tab": "MoonBot desktop study companion · OpenCode",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T06:40:29.870990",
+      "end_time": "2026-11-25T06:40:33.891899",
+      "duration_sec": 4
+    },
+    {
+      "app": "OpenCode.exe",
+      "window_or_tab": "MoonBot desktop study companion · OpenCode",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T06:40:13.736093",
+      "end_time": "2026-11-25T06:41:13.979314",
+      "duration_sec": 61
+    },
+    {
+      "app": "OpenCode.exe",
+      "window_or_tab": "MoonBot desktop study companion · OpenCode",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T06:40:34.012716",
+      "end_time": "2026-11-25T06:41:34.244988",
+      "duration_sec": 60
+    },
+    {
+      "app": "OpenCode.exe",
+      "window_or_tab": "MoonBot desktop study companion · OpenCode",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T06:41:14.381044",
+      "end_time": "2026-11-25T06:42:14.625587",
+      "duration_sec": 61
+    },
+    {
+      "app": "OpenCode.exe",
+      "window_or_tab": "MoonBot desktop study companion · OpenCode",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T06:41:34.680051",
+      "end_time": "2026-11-25T06:42:34.891209",
+      "duration_sec": 61
+    },
+    {
+      "app": "OpenCode.exe",
+      "window_or_tab": "MoonBot desktop study companion · OpenCode",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T06:42:14.764584",
+      "end_time": "2026-11-25T06:43:15.042469",
+      "duration_sec": 60
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:07:08.936205",
+      "end_time": "2026-11-25T07:08:09.270423",
+      "duration_sec": 60
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:08:09.679227",
+      "end_time": "2026-11-25T07:08:33.794049",
+      "duration_sec": 25
+    },
+    {
+      "app": "Code.exe",
+      "window_or_tab": "Visual Studio Code",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T07:08:34.148629",
+      "end_time": "2026-11-25T07:08:38.166671",
+      "duration_sec": 4
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:08:38.294281",
+      "end_time": "2026-11-25T07:08:44.327866",
+      "duration_sec": 6
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot — Deep Study Sanctuary",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:08:44.383208",
+      "end_time": "2026-11-25T07:08:46.385864",
+      "duration_sec": 2
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:08:46.515477",
+      "end_time": "2026-11-25T07:09:10.612507",
+      "duration_sec": 24
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:09:11.043327",
+      "end_time": "2026-11-25T07:10:11.350095",
+      "duration_sec": 61
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:10:12.025930",
+      "end_time": "2026-11-25T07:11:12.353180",
+      "duration_sec": 61
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:11:13.060266",
+      "end_time": "2026-11-25T07:11:35.168098",
+      "duration_sec": 23
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot — Deep Study Sanctuary",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:11:35.590584",
+      "end_time": "2026-11-25T07:11:49.676914",
+      "duration_sec": 14
+    },
+    {
+      "app": "Code.exe",
+      "window_or_tab": "Visual Studio Code",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T07:11:50.125875",
+      "end_time": "2026-11-25T07:12:02.197118",
+      "duration_sec": 13
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:12:02.624838",
+      "end_time": "2026-11-25T07:12:12.663380",
+      "duration_sec": 10
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:12:12.719529",
+      "end_time": "2026-11-25T07:12:24.775701",
+      "duration_sec": 12
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot — Deep Study Sanctuary",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:12:24.891033",
+      "end_time": "2026-11-25T07:13:01.093137",
+      "duration_sec": 36
+    },
+    {
+      "app": "SnippingTool.exe",
+      "window_or_tab": "Snipping Tool Overlay",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:13:01.530962",
+      "end_time": "2026-11-25T07:13:05.546010",
+      "duration_sec": 4
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot — Deep Study Sanctuary",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:13:05.671012",
+      "end_time": "2026-11-25T07:13:07.679465",
+      "duration_sec": 2
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:13:07.811968",
+      "end_time": "2026-11-25T07:13:13.834881",
+      "duration_sec": 6
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:13:13.883085",
+      "end_time": "2026-11-25T07:13:19.920134",
+      "duration_sec": 6
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:13:19.979018",
+      "end_time": "2026-11-25T07:13:24.001609",
+      "duration_sec": 4
+    },
+    {
+      "app": "SnippingTool.exe",
+      "window_or_tab": "Snipping Tool Overlay",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:13:24.129195",
+      "end_time": "2026-11-25T07:13:28.157848",
+      "duration_sec": 4
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:13:28.503957",
+      "end_time": "2026-11-25T07:13:32.522640",
+      "duration_sec": 4
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:13:32.958865",
+      "end_time": "2026-11-25T07:13:38.996043",
+      "duration_sec": 6
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:13:39.339597",
+      "end_time": "2026-11-25T07:13:43.362171",
+      "duration_sec": 4
+    },
+    {
+      "app": "SnippingTool.exe",
+      "window_or_tab": "Snipping Tool Overlay",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:13:43.510873",
+      "end_time": "2026-11-25T07:13:45.517433",
+      "duration_sec": 2
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:13:45.863000",
+      "end_time": "2026-11-25T07:13:59.899599",
+      "duration_sec": 14
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot — Deep Study Sanctuary",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:14:00.275263",
+      "end_time": "2026-11-25T07:14:04.292717",
+      "duration_sec": 4
+    },
+    {
+      "app": "SnippingTool.exe",
+      "window_or_tab": "Snipping Tool Overlay",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:14:04.411621",
+      "end_time": "2026-11-25T07:14:08.424075",
+      "duration_sec": 4
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot — Deep Study Sanctuary",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:14:08.769779",
+      "end_time": "2026-11-25T07:14:14.792171",
+      "duration_sec": 6
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot — Deep Study Sanctuary",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:14:15.140469",
+      "end_time": "2026-11-25T07:14:25.198578",
+      "duration_sec": 10
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:14:25.331637",
+      "end_time": "2026-11-25T07:14:27.332398",
+      "duration_sec": 2
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:14:27.672209",
+      "end_time": "2026-11-25T07:14:31.689324",
+      "duration_sec": 4
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:14:31.833684",
+      "end_time": "2026-11-25T07:15:16.052793",
+      "duration_sec": 44
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:15:16.738535",
+      "end_time": "2026-11-25T07:16:16.999714",
+      "duration_sec": 61
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:16:17.705894",
+      "end_time": "2026-11-25T07:17:17.929540",
+      "duration_sec": 61
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:17:18.381297",
+      "end_time": "2026-11-25T07:18:18.663055",
+      "duration_sec": 61
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:18:19.134337",
+      "end_time": "2026-11-25T07:19:19.399035",
+      "duration_sec": 61
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:19:19.844482",
+      "end_time": "2026-11-25T07:20:20.141816",
+      "duration_sec": 61
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:20:20.837875",
+      "end_time": "2026-11-25T07:21:21.105769",
+      "duration_sec": 61
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:21:21.541417",
+      "end_time": "2026-11-25T07:21:59.734842",
+      "duration_sec": 39
+    },
+    {
+      "app": "Idle / LockScreen",
+      "window_or_tab": "Screen Locked or No Active Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:22:00.179865",
+      "end_time": "2026-11-25T07:23:28.974677",
+      "duration_sec": 14
+    },
+    {
+      "app": "LockApp.exe",
+      "window_or_tab": "Windows Default Lock Screen",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:23:29.779762",
+      "end_time": "2026-11-25T07:23:31.788100",
+      "duration_sec": 3
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:23:31.840737",
+      "end_time": "2026-11-25T07:23:33.856535",
+      "duration_sec": 2
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:23:33.911065",
+      "end_time": "2026-11-25T07:24:34.184640",
+      "duration_sec": 60
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:24:34.870632",
+      "end_time": "2026-11-25T07:25:35.195090",
+      "duration_sec": 61
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:25:35.645484",
+      "end_time": "2026-11-25T07:26:35.913908",
+      "duration_sec": 61
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T07:26:36.064271",
+      "end_time": "2026-11-25T07:27:26.287684",
+      "duration_sec": 50
+    },
+    {
+      "app": "explorer.exe",
+      "window_or_tab": "Untitled Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:27:26.688312",
+      "end_time": "2026-11-25T07:27:28.700015",
+      "duration_sec": 2
+    },
+    {
+      "app": "Code.exe",
+      "window_or_tab": "Visual Studio Code",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T07:27:28.762926",
+      "end_time": "2026-11-25T07:27:34.774753",
+      "duration_sec": 6
+    },
+    {
+      "app": "Code.exe",
+      "window_or_tab": "Open Folder",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T07:27:35.366155",
+      "end_time": "2026-11-25T07:27:37.368748",
+      "duration_sec": 3
+    },
+    {
+      "app": "Code.exe",
+      "window_or_tab": "Open Folder",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T07:27:37.524103",
+      "end_time": "2026-11-25T07:27:51.574457",
+      "duration_sec": 14
+    },
+    {
+      "app": "Code.exe",
+      "window_or_tab": "main.py - moon-bot - Visual Studio Code",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T07:27:51.941411",
+      "end_time": "2026-11-25T07:27:59.955695",
+      "duration_sec": 8
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:28:00.090331",
+      "end_time": "2026-11-25T07:28:02.796456",
+      "duration_sec": 2
+    },
+    {
+      "app": "Code.exe",
+      "window_or_tab": "main.py - moon-bot - Visual Studio Code",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T07:32:30.465190",
+      "end_time": "2026-11-25T07:32:32.469143",
+      "duration_sec": 2
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:32:32.517513",
+      "end_time": "2026-11-25T07:32:40.572711",
+      "duration_sec": 8
+    },
+    {
+      "app": "python.exe",
+      "window_or_tab": "MoonBot HUD",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T07:33:19.583942",
+      "end_time": "2026-11-25T07:33:27.622095",
+      "duration_sec": 8
+    },
+    {
+      "app": "Idle / LockScreen",
+      "window_or_tab": "Screen Locked or No Active Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T13:27:10.857170",
+      "end_time": "2026-11-25T13:27:12.865088",
+      "duration_sec": 2
+    },
+    {
+      "app": "explorer.exe",
+      "window_or_tab": "moon-bot - File Explorer",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T13:27:13.235088",
+      "end_time": "2026-11-25T13:27:15.246954",
+      "duration_sec": 2
+    },
+    {
+      "app": "explorer.exe",
+      "window_or_tab": "Untitled Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T13:48:35.996412",
+      "end_time": "2026-11-25T13:48:46.034606",
+      "duration_sec": 10
+    },
+    {
+      "app": "explorer.exe",
+      "window_or_tab": "Program Manager",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T13:48:46.175846",
+      "end_time": "2026-11-25T13:49:48.704852",
+      "duration_sec": 4
+    },
+    {
+      "app": "Idle / LockScreen",
+      "window_or_tab": "Screen Locked or No Active Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T13:49:49.143894",
+      "end_time": "2026-11-25T13:49:51.159583",
+      "duration_sec": 2
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T13:49:51.311396",
+      "end_time": "2026-11-25T13:49:53.329048",
+      "duration_sec": 2
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "YouTube — Mozilla Firefox",
+      "category": "Distraction / Entertainment",
+      "site": "YouTube",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T13:49:53.444993",
+      "end_time": "2026-11-25T13:49:55.537439",
+      "duration_sec": 2
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "YouTube — Mozilla Firefox",
+      "category": "Distraction / Entertainment",
+      "site": "YouTube",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T13:49:55.711588",
+      "end_time": "2026-11-25T13:50:31.709546",
+      "duration_sec": 28
+    },
+    {
+      "app": "Idle / LockScreen",
+      "window_or_tab": "Screen Locked or No Active Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T13:50:32.408554",
+      "end_time": "2026-11-25T13:50:34.414081",
+      "duration_sec": 3
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T13:50:34.581995",
+      "end_time": "2026-11-25T13:51:36.532139",
+      "duration_sec": 2
+    },
+    {
+      "app": "Code.exe",
+      "window_or_tab": "main.py - moon-bot - Visual Studio Code",
+      "category": "Development & Coding",
+      "site": "",
+      "document": "",
+      "context_kind": "code",
+      "start_time": "2026-11-25T14:16:06.138796",
+      "end_time": "2026-11-25T14:16:38.253131",
+      "duration_sec": 32
+    },
+    {
+      "app": "Idle / LockScreen",
+      "window_or_tab": "Screen Locked or No Active Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T14:16:45.538793",
+      "end_time": "2026-11-25T14:16:47.539641",
+      "duration_sec": 2
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:16:47.712875",
+      "end_time": "2026-11-25T14:16:49.723282",
+      "duration_sec": 2
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "All Mail - kjha31274@gmail.com - Gmail — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gmail",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:16:50.144467",
+      "end_time": "2026-11-25T14:16:56.171852",
+      "duration_sec": 6
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Join KARAN's family group? - kjha31274@gmail.com - Gmail — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gmail",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:16:56.563579",
+      "end_time": "2026-11-25T14:17:00.581106",
+      "duration_sec": 4
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:17:00.963715",
+      "end_time": "2026-11-25T14:17:04.965856",
+      "duration_sec": 4
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Join a Family Group — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:17:06.352190",
+      "end_time": "2026-11-25T14:17:08.358782",
+      "duration_sec": 3
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Join a Family Group — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:17:09.478737",
+      "end_time": "2026-11-25T14:17:11.485530",
+      "duration_sec": 3
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Your family on Google — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:17:11.892203",
+      "end_time": "2026-11-25T14:17:17.914457",
+      "duration_sec": 6
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Invite your family — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:17:18.103597",
+      "end_time": "2026-11-25T14:17:24.116254",
+      "duration_sec": 6
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Your family on Google — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:17:24.501196",
+      "end_time": "2026-11-25T14:17:38.561046",
+      "duration_sec": 14
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:17:39.047749",
+      "end_time": "2026-11-25T14:17:41.054633",
+      "duration_sec": 2
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "‎Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:17:41.133542",
+      "end_time": "2026-11-25T14:17:43.144445",
+      "duration_sec": 2
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:17:43.804667",
+      "end_time": "2026-11-25T14:17:45.816152",
+      "duration_sec": 3
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gemini",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:17:45.998451",
+      "end_time": "2026-11-25T14:17:55.150502",
+      "duration_sec": 6
+    },
+    {
+      "app": "Idle / LockScreen",
+      "window_or_tab": "Screen Locked or No Active Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T14:17:55.311668",
+      "end_time": "2026-11-25T14:17:57.322414",
+      "duration_sec": 2
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Your family on Google — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:17:57.738726",
+      "end_time": "2026-11-25T14:18:09.771722",
+      "duration_sec": 12
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Your family on Google — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:18:09.930668",
+      "end_time": "2026-11-25T14:18:11.932616",
+      "duration_sec": 2
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Join KARAN's family group? - kjha31274@gmail.com - Gmail — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gmail",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:18:12.104500",
+      "end_time": "2026-11-25T14:18:26.166804",
+      "duration_sec": 14
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "All Mail - kjha31274@gmail.com - Gmail — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "Gmail",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:18:26.693279",
+      "end_time": "2026-11-25T14:18:28.697622",
+      "duration_sec": 3
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Your family on Google — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:18:28.865440",
+      "end_time": "2026-11-25T14:19:10.987952",
+      "duration_sec": 42
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "Your family on Google — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:19:11.651505",
+      "end_time": "2026-11-25T14:19:13.655879",
+      "duration_sec": 3
+    },
+    {
+      "app": "firefox.exe",
+      "window_or_tab": "ChatGPT: Chat, Work, Create & Code with AI — Mozilla Firefox",
+      "category": "Browser / Research",
+      "site": "ChatGPT",
+      "document": "",
+      "context_kind": "web",
+      "start_time": "2026-11-25T14:19:13.827898",
+      "end_time": "2026-11-25T14:19:17.839722",
+      "duration_sec": 4
+    },
+    {
+      "app": "explorer.exe",
+      "window_or_tab": "Untitled Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T14:19:18.002805",
+      "end_time": "2026-11-25T14:19:20.012225",
+      "duration_sec": 2
+    },
+    {
+      "app": "Idle / LockScreen",
+      "window_or_tab": "Screen Locked or No Active Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T14:20:40.708161",
+      "end_time": "2026-11-25T14:20:42.719518",
+      "duration_sec": 2
+    },
+    {
+      "app": "explorer.exe",
+      "window_or_tab": "Untitled Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T14:20:42.882053",
+      "end_time": "2026-11-25T14:20:44.894268",
+      "duration_sec": 2
+    },
+    {
+      "app": "explorer.exe",
+      "window_or_tab": "Untitled Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T14:20:45.052984",
+      "end_time": "2026-11-25T14:20:55.089221",
+      "duration_sec": 10
+    },
+    {
+      "app": "Idle / LockScreen",
+      "window_or_tab": "Screen Locked or No Active Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T14:27:04.517575",
+      "end_time": "2026-11-25T14:27:06.528175",
+      "duration_sec": 2
+    },
+    {
+      "app": "explorer.exe",
+      "window_or_tab": "Untitled Window",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T14:27:06.644967",
+      "end_time": "2026-11-25T14:27:08.646745",
+      "duration_sec": 2
+    },
+    {
+      "app": "explorer.exe",
+      "window_or_tab": "Program Manager",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T14:27:08.785113",
+      "end_time": "2026-11-25T14:27:10.798685",
+      "duration_sec": 2
+    },
+    {
+      "app": "explorer.exe",
+      "window_or_tab": "Program Manager",
+      "category": "Other / System",
+      "site": "",
+      "document": "",
+      "context_kind": "app",
+      "start_time": "2026-11-25T14:27:10.888734",
+      "end_time": "2026-11-25T14:28:04.269561",
+      "duration_sec": 2
+    }
+  ],
+  "events": [
+    {
+      "id": "evt-5cac0430",
+      "timestamp": "2026-11-25T07:12:49.169699",
+      "event_type": "concept_lookup",
+      "title": "Lookup: Derive and explain the variables",
+      "details": "Topic: MoonBot — Deep Study Sanctuary. Source: offline_fallback"
+    },
+    {
+      "id": "evt-3bc30d6c",
+      "timestamp": "2026-11-25T13:49:53.475585",
+      "event_type": "distraction_warning",
+      "title": "Distraction Detected",
+      "details": "firefox.exe — YouTube — Mozilla Firefox"
+    },
+    {
+      "id": "evt-7bb9e2c6",
+      "timestamp": "2026-11-25T14:19:41.818506",
+      "event_type": "concept_lookup",
+      "title": "Lookup: Geometric Progression in Computer Science",
+      "details": "Topic: ChatGPT: ChatGPT: Chat, Work, Create & Code with AI | Firefox | ChatGPT | ChatGPT: Chat, Work, Create & Code with AI. Source: gemini"
+    }
+  ],
+  "app_sessions": [
+    {
+      "session_id": "app-0580459d",
+      "start_time": "2026-11-25T00:42:07.624602",
+      "end_time": "2026-11-25T00:55:40.654645",
+      "duration_sec": 813
+    },
+    {
+      "session_id": "app-2594ddd4",
+      "start_time": "2026-11-25T06:28:40.835266",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-3d81ba89",
+      "start_time": "2026-11-25T06:30:53.739668",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-46e6341c",
+      "start_time": "2026-11-25T06:31:11.106042",
+      "end_time": "2026-11-25T06:31:15.617984",
+      "duration_sec": 4
+    },
+    {
+      "session_id": "app-efc04611",
+      "start_time": "2026-11-25T06:31:27.553610",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-c4e10747",
+      "start_time": "2026-11-25T06:34:32.269560",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-3870ff63",
+      "start_time": "2026-11-25T06:35:23.499607",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-efa65f41",
+      "start_time": "2026-11-25T06:35:58.232137",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-d3d5e6e3",
+      "start_time": "2026-11-25T06:36:26.199523",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-c86b5141",
+      "start_time": "2026-11-25T06:36:37.678895",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-84fc307f",
+      "start_time": "2026-11-25T06:38:09.479444",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-6c196761",
+      "start_time": "2026-11-25T06:38:29.539725",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-27ad62f9",
+      "start_time": "2026-11-25T06:43:31.313782",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-0b626c90",
+      "start_time": "2026-11-25T06:44:09.086754",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-13a9f8a5",
+      "start_time": "2026-11-25T06:44:20.272483",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-1857b89b",
+      "start_time": "2026-11-25T06:52:33.040455",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-52932cf2",
+      "start_time": "2026-11-25T06:53:02.363452",
+      "end_time": "2026-11-25T06:53:05.207817",
+      "duration_sec": 2
+    },
+    {
+      "session_id": "app-69f85599",
+      "start_time": "2026-11-25T06:54:59.866080",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-7adff944",
+      "start_time": "2026-11-25T06:56:00.794354",
+      "end_time": "2026-11-25T06:56:03.749852",
+      "duration_sec": 2
+    },
+    {
+      "session_id": "app-47f1a18a",
+      "start_time": "2026-11-25T06:57:13.405723",
+      "end_time": "2026-11-25T06:57:15.935320",
+      "duration_sec": 2
+    },
+    {
+      "session_id": "app-44b64240",
+      "start_time": "2026-11-25T06:58:09.865818",
+      "end_time": "2026-11-25T06:58:12.782477",
+      "duration_sec": 2
+    },
+    {
+      "session_id": "app-a4dac5db",
+      "start_time": "2026-11-25T06:58:54.157274",
+      "end_time": "2026-11-25T06:58:57.162872",
+      "duration_sec": 3
+    },
+    {
+      "session_id": "app-b6db5017",
+      "start_time": "2026-11-25T06:59:53.718723",
+      "end_time": "2026-11-25T06:59:56.377530",
+      "duration_sec": 2
+    },
+    {
+      "session_id": "app-71de8fa2",
+      "start_time": "2026-11-25T07:07:05.917285",
+      "end_time": "2026-11-25T07:28:03.156806",
+      "duration_sec": 1257
+    },
+    {
+      "session_id": "app-1a29c8bc",
+      "start_time": "2026-11-25T07:32:26.613729",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-504fb5f3",
+      "start_time": "2026-11-25T07:33:15.473697",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-1b103ab8",
+      "start_time": "2026-11-25T07:45:46.870746",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-95c7eebc",
+      "start_time": "2026-11-25T08:40:46.604631",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-74279b4f",
+      "start_time": "2026-11-25T13:26:58.291176",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-78d14c1c",
+      "start_time": "2026-11-25T13:48:09.133378",
+      "end_time": null,
+      "duration_sec": 0
+    },
+    {
+      "session_id": "app-14c4c2aa",
+      "start_time": "2026-11-25T13:48:25.171504",
+      "end_time": "2026-11-25T13:51:36.895528",
+      "duration_sec": 191
+    },
+    {
+      "session_id": "app-125f37fa",
+      "start_time": "2026-11-25T14:15:57.106120",
+      "end_time": "2026-11-25T14:28:04.397324",
+      "duration_sec": 727
+    }
+  ],
+  "summary": {
+    "total_study_sec": 0,
+    "total_active_sec": 2235,
+    "total_moonbot_sec": 3005,
+    "categories": {
+      "Other / System": 716,
+      "Development & Coding": 625,
+      "Browser / Research": 864,
+      "Distraction / Entertainment": 30
+    },
+    "apps": {
+      "python.exe": 608,
+      "Idle / LockScreen": 44,
+      "LockApp.exe": 6,
+      "OpenCode.exe": 541,
+      "brave.exe": 2,
+      "Code.exe": 84,
+      "ShellExperienceHost.exe": 4,
+      "explorer.exe": 40,
+      "SnippingTool.exe": 14,
+      "firefox.exe": 892
+    },
+    "titles": {
+      "MoonBot HUD": 532,
+      "Screen Locked or No Active Window": 44,
+      "Windows Default Lock Screen": 6,
+      "MoonBot desktop study companion · OpenCode": 541,
+      "Showdown! - Brave": 2,
+      "main.py - moon-bot - Visual Studio Code": 44,
+      "Jump List for Python": 4,
+      "Untitled Window": 30,
+      "CTk": 2,
+      "Visual Studio Code": 23,
+      "MoonBot — Deep Study Sanctuary": 74,
+      "Snipping Tool Overlay": 14,
+      "Emergency CSE Project Survival Guide - Google Gemini — Mozilla Firefox": 727,
+      "Open Folder": 17,
+      "moon-bot - File Explorer": 2,
+      "Program Manager": 8,
+      "Mozilla Firefox": 8,
+      "YouTube — Mozilla Firefox": 30,
+      "All Mail - kjha31274@gmail.com - Gmail — Mozilla Firefox": 9,
+      "Join KARAN's family group? - kjha31274@gmail.com - Gmail — Mozilla Firefox": 18,
+      "Join a Family Group — Mozilla Firefox": 6,
+      "Your family on Google — Mozilla Firefox": 79,
+      "Invite your family — Mozilla Firefox": 6,
+      "‎Google Gemini — Mozilla Firefox": 2,
+      "Google Gemini — Mozilla Firefox": 3,
+      "ChatGPT: Chat, Work, Create & Code with AI — Mozilla Firefox": 4
+    }
+  }
+}

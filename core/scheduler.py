@@ -114,7 +114,9 @@ class StudyTimer:
             self.state = self.STATE_STOPPED
         thread = self._running_thread
         if thread and thread.is_alive() and thread is not threading.current_thread():
-            thread.join(timeout=2.0)
+            thread.join(timeout=5.0)
+            if thread.is_alive():
+                logger.warning("StudyTimer thread did not stop within 5 seconds")
         with self._lock:
             self._running_thread = None
 
@@ -194,7 +196,8 @@ class StudyTimer:
     def _run_loop(self) -> None:
         """Second-by-second countdown loop."""
         while not self._stop_event.is_set():
-            time.sleep(1.0)
+            if self._stop_event.wait(1.0):
+                break
             with self._lock:
                 if self.state == self.STATE_RUNNING:
                     if self.remaining_seconds > 0:
@@ -241,6 +244,7 @@ class AcademicScheduler:
         self.check_interval_sec = max(0.5, float(check_interval_sec))
         self._running = False
         self._thread: Optional[threading.Thread] = None
+        self._stop_event = threading.Event()
         self._lock = threading.RLock()
         self._triggered_events: Set[str] = set()
         self._alarms: List[Dict[str, Any]] = []
@@ -332,22 +336,29 @@ class AcademicScheduler:
         if self._running:
             return
         self._running = True
+        self._stop_event.clear()
         self._thread = threading.Thread(target=self._check_loop, daemon=True, name="MoonBot-Scheduler")
         self._thread.start()
         logger.info("AcademicScheduler started.")
 
     def stop(self) -> None:
         self._running = False
-        if self._thread and self._thread.is_alive():
-            self._thread.join(timeout=2.0)
+        self._stop_event.set()
+        thread = self._thread
+        if thread and thread.is_alive() and thread is not threading.current_thread():
+            thread.join(timeout=5.0)
+            if thread.is_alive():
+                logger.warning("AcademicScheduler thread did not stop within 5 seconds")
+        self._thread = None
 
     def _check_loop(self) -> None:
-        while self._running:
+        while self._running and not self._stop_event.is_set():
             try:
                 self._check_upcoming_items()
             except Exception as e:
                 logger.error(f"Error checking schedule: {e}")
-            time.sleep(self.check_interval_sec)
+            if self._stop_event.wait(self.check_interval_sec):
+                break
 
     def _check_upcoming_items(self) -> None:
         self._check_alarms()

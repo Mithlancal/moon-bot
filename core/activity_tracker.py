@@ -16,13 +16,14 @@ obtaining full URLs would require a per-browser extension and is deliberately no
 """
 
 import logging
+import os
 import threading
 import time
 from datetime import datetime
 from typing import Callable, Dict, Optional, Tuple
 
 import config
-from core import json_db
+from core import json_db, web_context
 
 logger = logging.getLogger("MoonBot.ActivityTracker")
 
@@ -67,6 +68,7 @@ DISTRACTION_KEYWORDS = [
 ]
 
 DISTRACTION_CATEGORY = "Distraction / Entertainment"
+MOONBOT_TITLE_TOKENS = ("moonbot", "study dashboard", "ask & learn", "focus pomodoro")
 
 
 def classify_activity(process_name: str, window_title: str) -> str:
@@ -101,10 +103,13 @@ def classify_activity(process_name: str, window_title: str) -> str:
     return "Other / System"
 
 
-def get_foreground_window_info() -> Tuple[str, str]:
+def get_foreground_window_info(ignore_pids: Optional[set[int]] = None) -> Tuple[str, str]:
     """
     Retrieve the current active foreground process name and window title.
-    Returns: (process_name, window_title)
+
+    MoonBot windows are ignored: interacting with the HUD or dashboard should not
+    replace the PDF/page the student was reading. Returns ("", "") for ignored
+    windows so the tracker can pause instead of logging MoonBot as an activity.
     """
     if not HAS_WIN32:
         return ("System", "Windows Foreground Window (pywin32 unavailable)")
@@ -115,12 +120,21 @@ def get_foreground_window_info() -> Tuple[str, str]:
             return ("Idle / LockScreen", "Screen Locked or No Active Window")
 
         window_title = win32gui.GetWindowText(hwnd).strip()
+        lowered_title = window_title.lower()
+        if any(token in lowered_title for token in MOONBOT_TITLE_TOKENS):
+            return ("", "")
+
+        _, pid = win32process.GetWindowThreadProcessId(hwnd)
+        ignored = {os.getpid()}
+        if ignore_pids:
+            ignored.update(ignore_pids)
+        if pid in ignored:
+            return ("", "")
+
         if not window_title:
             window_title = "Untitled Window"
 
-        _, pid = win32process.GetWindowThreadProcessId(hwnd)
         process_name = "Unknown"
-
         if HAS_PSUTIL and pid > 0:
             try:
                 proc = psutil.Process(pid)
@@ -130,10 +144,15 @@ def get_foreground_window_info() -> Tuple[str, str]:
         else:
             process_name = f"HWND_{hwnd}"
 
+        # A process from this app can still be foreground without a MoonBot title
+        # (for example a short-lived dialog). Keep the context stable there too.
+        if pid in ignored and any(token in process_name.lower() for token in ("python", "pythonw")):
+            return ("", "")
+
         return (process_name, window_title)
 
-    except Exception as e:
-        logger.debug(f"Error reading foreground window: {e}")
+    except Exception as exc:
+        logger.debug(f"Error reading foreground window: {exc}")
         return ("Unknown", "Inaccessible Window")
 
 
@@ -155,6 +174,7 @@ class ActivityTracker:
         self.poll_interval = max(0.5, float(poll_interval))
         self._running = False
         self._thread: Optional[threading.Thread] = None
+        self._stop_event = threading.Event()
         # RLock: the loop calls _flush_current_span() while holding the lock.
         self._lock = threading.RLock()
 
@@ -162,15 +182,18 @@ class ActivityTracker:
         self._current_app: Optional[str] = None
         self._current_title: Optional[str] = None
         self._current_category: Optional[str] = None
+        self._current_context: Dict[str, str] = {}
         self._span_start_time: Optional[datetime] = None
         self._accumulated_sec: float = 0.0
         self._last_poll_mono: float = 0.0
         self._last_checkpoint_mono: float = 0.0
         self._last_distraction_mono: float = 0.0
+        self._ignored_pids: set[int] = {os.getpid()}
 
-        # Callbacks: cb(app, title, category) / cb(app, title)
+        # Callbacks: cb(app, title, category) / cb(app, title) / cb(context)
         self._on_activity_changed: Optional[Callable[[str, str, str], None]] = None
         self._on_distraction: Optional[Callable[[str, str], None]] = None
+        self._on_context_changed: Optional[Callable[[Dict[str, str]], None]] = None
 
     def set_activity_changed_callback(self, cb: Callable[[str, str, str], None]) -> None:
         self._on_activity_changed = cb
@@ -179,12 +202,27 @@ class ActivityTracker:
         """Register a callback for throttled distraction warnings (fired at most every 5 min)."""
         self._on_distraction = cb
 
+    def set_context_callback(self, cb: Callable[[Dict[str, str]], None]) -> None:
+        """Register a callback receiving the parsed PDF/site/document context."""
+        self._on_context_changed = cb
+
+    def ignore_pid(self, pid: int) -> None:
+        """Add a process whose windows must never become study context."""
+        if pid > 0:
+            self._ignored_pids.add(int(pid))
+
+    def get_current_context(self) -> Dict[str, str]:
+        """Return a snapshot of the active document/site context (no browser URLs are read)."""
+        with self._lock:
+            return dict(self._current_context)
+
     def start(self) -> None:
         """Start the background tracker."""
         with self._lock:
             if self._running:
                 return
             self._running = True
+            self._stop_event.clear()
             self._last_poll_mono = time.monotonic()
             self._last_checkpoint_mono = self._last_poll_mono
             self._thread = threading.Thread(target=self._tracker_loop, daemon=True, name="MoonBot-Tracker")
@@ -197,9 +235,13 @@ class ActivityTracker:
             if not self._running:
                 return
             self._running = False
+            self._stop_event.set()
 
-        if self._thread and self._thread.is_alive():
-            self._thread.join(timeout=2.0)
+        if self._thread and self._thread.is_alive() and self._thread is not threading.current_thread():
+            self._thread.join(timeout=5.0)
+            if self._thread.is_alive():
+                logger.warning("ActivityTracker thread did not stop within 5 seconds")
+        self._thread = None
 
         self._flush_current_span()
         logger.info("ActivityTracker stopped.")
@@ -224,10 +266,14 @@ class ActivityTracker:
             end_time = datetime.now()
             start_time = self._span_start_time or end_time
             if duration >= 1:
+                context = self._current_context or {}
                 span_data = {
                     "app": self._current_app,
                     "window_or_tab": self._current_title or "Untitled",
                     "category": self._current_category or "Other / System",
+                    "site": context.get("site", ""),
+                    "document": context.get("document", ""),
+                    "context_kind": context.get("kind", ""),
                     "start_time": start_time.isoformat(),
                     "end_time": end_time.isoformat(),
                     "duration_sec": duration
@@ -242,27 +288,34 @@ class ActivityTracker:
             self._current_app = None
             self._current_title = None
             self._current_category = None
+            self._current_context = {}
             self._accumulated_sec = 0.0
             self._span_start_time = None
 
-    def _begin_span(self, app: str, title: str, category: str) -> None:
+    def _begin_span(self, app: str, title: str, category: str, context: Optional[Dict[str, str]] = None) -> None:
         self._current_app = app
         self._current_title = title
         self._current_category = category
+        self._current_context = dict(context or {})
         self._accumulated_sec = 0.0
         self._span_start_time = datetime.now()
 
     def _tracker_loop(self) -> None:
         """Main background loop."""
-        while self._running:
+        while self._running and not self._stop_event.is_set():
             now_mono = time.monotonic()
             # Cap catch-up time so a suspended machine does not log hours of phantom activity.
             elapsed = min(max(0.0, now_mono - self._last_poll_mono), self.poll_interval * 5)
             self._last_poll_mono = now_mono
 
             try:
-                app_name, title = get_foreground_window_info()
+                app_name, title = get_foreground_window_info(self._ignored_pids)
+                if not app_name or not title:
+                    # MoonBot's own window is foreground. Pause tracking so the
+                    # last PDF/page context stays visible in Ask & Learn.
+                    continue
                 category = classify_activity(app_name, title)
+                context = web_context.parse_context(app_name, title)
 
                 with self._lock:
                     if self._current_app:
@@ -274,14 +327,19 @@ class ActivityTracker:
                     )
                     if changed:
                         self._flush_current_span()
-                        self._begin_span(app_name, title, category)
+                        self._begin_span(app_name, title, category, context)
                         if self._on_activity_changed:
                             try:
                                 self._on_activity_changed(app_name, title, category)
                             except Exception as e:
                                 logger.debug(f"Activity callback error: {e}")
+                        if self._on_context_changed:
+                            try:
+                                self._on_context_changed(dict(context))
+                            except Exception as e:
+                                logger.debug(f"Context callback error: {e}")
                     elif not self._current_app:
-                        self._begin_span(app_name, title, category)
+                        self._begin_span(app_name, title, category, context)
 
                     # Throttled distraction warning, only while actively tracking a window.
                     if (
@@ -309,12 +367,17 @@ class ActivityTracker:
                         and self._current_app
                         and self._accumulated_sec >= 1
                     ):
-                        same_app, same_title, same_category = self._current_app, self._current_title, self._current_category
+                        same_app = self._current_app
+                        same_title = self._current_title
+                        same_category = self._current_category
+                        same_context = dict(self._current_context)
                         self._flush_current_span()
-                        self._begin_span(same_app, same_title, same_category)
+                        self._begin_span(same_app, same_title, same_category, same_context)
                         self._last_checkpoint_mono = now_mono
 
             except Exception as e:
                 logger.error(f"Exception in ActivityTracker loop: {e}")
 
-            time.sleep(self.poll_interval)
+            # Interruptible sleep: shutdown does not wait for a full poll interval.
+            if self._stop_event.wait(self.poll_interval):
+                break

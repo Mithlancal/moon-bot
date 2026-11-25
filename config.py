@@ -1,8 +1,3 @@
-"""
-config.py — MoonBot Global Configuration & Design System Constants
-Local-first floating desktop study companion for CSE Project.
-"""
-
 from pathlib import Path
 import os
 from dotenv import load_dotenv
@@ -15,6 +10,16 @@ SCHEDULE_FILE = DATA_DIR / "schedule.json"
 MEMORY_FILE = DATA_DIR / "memory.json"
 ASSETS_DIR = BASE_DIR / "ui"
 LOGO_PATH = ASSETS_DIR / "moon-bot-logo.png"
+USER_SETTINGS_FILENAME = "settings.json"
+
+# Clipboard highlight capture (opt-in, local only). When enabled MoonBot watches
+# for newly copied text and offers to explain/translate it using the active window
+# context (PDF/tab title). Nothing is uploaded except the text you explicitly ask
+# MoonBot to analyze.
+try:
+    CLIPBOARD_POLL_INTERVAL = float(os.getenv("CLIPBOARD_POLL_INTERVAL", "1.2"))
+except ValueError:
+    CLIPBOARD_POLL_INTERVAL = 1.2
 
 # Load environment variables from .env file
 load_dotenv(dotenv_path=BASE_DIR / ".env")
@@ -26,7 +31,42 @@ if UI_THEME not in ("dark", "light", "system"):
 
 # Gemini Configuration
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "").strip()
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip()
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash").strip() or "gemini-2.5-flash"
+
+# If the configured model is unavailable (bad name, unsupported, or out of
+# quota), try these in order before using the local fallback answers.
+GEMINI_FALLBACK_MODELS = tuple(
+    model.strip()
+    for model in os.getenv(
+        "GEMINI_FALLBACK_MODELS",
+        "gemini-3.5-flash-lite,gemini-2.5-flash-lite,gemini-3.5-flash,"
+        "gemini-2.5-flash,gemini-3.7-flash,gemini-3.6-flash,gemini-2.0-flash"
+    ).split(",")
+    if model.strip()
+)
+try:
+    GEMINI_MAX_MODEL_ATTEMPTS = max(1, int(os.getenv("GEMINI_MAX_MODEL_ATTEMPTS", "3")))
+except ValueError:
+    GEMINI_MAX_MODEL_ATTEMPTS = 3
+
+try:
+    # Milliseconds. A hard cap keeps the offline fallback responsive when the
+    # API is overloaded or the network stalls mid-request.
+    # The Gemini SDK rejects deadlines below 10 seconds.
+    GEMINI_TIMEOUT_MS = max(10000, int(os.getenv("GEMINI_TIMEOUT_MS", "10000")))
+except ValueError:
+    GEMINI_TIMEOUT_MS = 10000
+
+try:
+    # Total budget for one answer across all model attempts. A slow request or
+    # a quota error stops immediately instead of walking a long fallback chain.
+    GEMINI_TOTAL_TIMEOUT_MS = max(10000, int(os.getenv("GEMINI_TOTAL_TIMEOUT_MS", "13000")))
+except ValueError:
+    GEMINI_TOTAL_TIMEOUT_MS = 13000
+
+# The UI shows a local answer before the network deadline so a question never
+# sits on “processing” while the request is still pending.
+QUERY_WATCHDOG_MS = max(4000, GEMINI_TIMEOUT_MS - 1500)
 
 # Activity Tracking Configuration
 try:
@@ -50,7 +90,7 @@ BOT_NAME = "MoonBot"
 PROJECT_TITLE = "MoonBot - Floating Desktop Study Companion"
 ACADEMIC_LEVEL = "3rd Year CSE Capstone"
 
-# Nocturne Focus Design System Tokens
+# Study dashboard design tokens
 THEME_COLORS = {
     # Surfaces
     "surface": "#0F1115",

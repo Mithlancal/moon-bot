@@ -1,7 +1,7 @@
 """
 ui/charts.py — Matplotlib Analytics Canvas for MoonBot
-Renders Nocturne Focus themed study analytics (category donut, hourly time graph
-and top-application bar chart) embedded directly inside CustomTkinter.
+Renders study analytics (category donut, hourly time graph and top-application
+bar chart) embedded directly inside CustomTkinter.
 All data comes from the local daily JSON log — no demo numbers are invented.
 """
 
@@ -16,7 +16,7 @@ import customtkinter as ctk
 import config
 from core import json_db
 
-# Chart Palette from Nocturne Focus tokens
+# Chart palette from the study dashboard theme
 CHART_BG = "#181C21"
 CARD_BG = "#21262D"
 TEXT_COLOR = "#E2E2E8"
@@ -36,8 +36,27 @@ class DailyChartsFrame(ctk.CTkFrame):
         super().__init__(master, fg_color=CARD_BG, corner_radius=12, **kwargs)
         self.figure = None
         self.canvas = None
+        self._disposed = False
         self._setup_ui()
         self.refresh_data()
+
+    def dispose(self) -> None:
+        """Close the Matplotlib figure and detach the Tk canvas (main thread only)."""
+        self._disposed = True
+        canvas, self.canvas = self.canvas, None
+        figure, self.figure = self.figure, None
+        if canvas is not None:
+            try:
+                widget = canvas.get_tk_widget()
+                widget.pack_forget()
+                widget.destroy()
+            except Exception:
+                pass
+        if figure is not None:
+            try:
+                plt.close(figure)
+            except Exception:
+                pass
 
     def _setup_ui(self) -> None:
         header = ctk.CTkFrame(self, fg_color="transparent")
@@ -76,6 +95,8 @@ class DailyChartsFrame(ctk.CTkFrame):
 
     def refresh_data(self) -> None:
         """Fetch today's JSON log data and rebuild matplotlib plots."""
+        if self._disposed:
+            return
         daily_log = json_db.get_daily_log()
         summary = json_db.get_daily_aggregates(daily_log.get("date"))
         hourly = json_db.get_hourly_study_distribution(daily_log.get("date"))

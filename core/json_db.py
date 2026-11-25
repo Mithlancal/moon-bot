@@ -6,6 +6,7 @@ schedule management, memory vault, and analytics aggregation for MoonBot.
 
 import json
 import os
+import re
 import tempfile
 import threading
 from datetime import datetime, date, timedelta
@@ -218,6 +219,49 @@ def end_app_session(session_id: str, date_str: Optional[str] = None) -> bool:
 
 
 # -------------------------------------------------------------------------
+# User Settings (user-defined timer, clipboard capture, last objective)
+# -------------------------------------------------------------------------
+
+def _default_user_settings() -> Dict[str, Any]:
+    """User-owned defaults. The first study sprint length is chosen by the user."""
+    return {
+        "focus_minutes": config.DEFAULT_WORK_MIN,
+        "break_minutes": config.DEFAULT_BREAK_MIN,
+        "last_objective": "Deep Work: Computer Systems & Architecture",
+        "auto_clipboard_capture": True,
+        "translation_language": "English",
+        "theme": config.UI_THEME,
+    }
+
+
+def _settings_path() -> Path:
+    """Resolve settings from the active DATA_DIR so temp-data smoke tests stay isolated."""
+    return config.DATA_DIR / config.USER_SETTINGS_FILENAME
+
+
+def get_user_settings() -> Dict[str, Any]:
+    with _db_lock:
+        config.ensure_data_directories()
+        settings = _safe_read_json(_settings_path(), _default_user_settings)
+        defaults = _default_user_settings()
+        defaults.update(settings if isinstance(settings, dict) else {})
+        return defaults
+
+
+def save_user_settings(data: Dict[str, Any]) -> Dict[str, Any]:
+    with _db_lock:
+        config.ensure_data_directories()
+        settings = get_user_settings()
+        settings.update(data or {})
+        _atomic_write_json(_settings_path(), settings)
+        return settings
+
+
+def update_user_settings(**changes: Any) -> Dict[str, Any]:
+    return save_user_settings(changes)
+
+
+# -------------------------------------------------------------------------
 # Schedule Engine (Exams, Tests, Orientations, Pop Quizzes, Reminders, Alarms)
 # -------------------------------------------------------------------------
 
@@ -367,6 +411,8 @@ def _default_memory() -> Dict[str, Any]:
                 "created_at": now
             }
         ],
+        # Structured Cornell-style memos generated from highlighted text.
+        "memos": [],
         "history": []
     }
 
@@ -426,6 +472,86 @@ def add_quick_note(title: str, content: str, tags: Optional[List[str]] = None) -
         return note
 
 
+def add_memo_note(
+    title: str,
+    topic: str,
+    cues: str,
+    notes: str,
+    summary: str,
+    source_text: str = "",
+    context: str = "",
+    tags: Optional[List[str]] = None
+) -> Dict[str, Any]:
+    """Store a structured Cornell-style memo generated from a highlight or query."""
+    with _db_lock:
+        mem = get_memory()
+        memo = {
+            "id": f"memo-{uuid.uuid4().hex[:8]}",
+            "title": title.strip() or "Study Memo",
+            "topic": topic.strip(),
+            "cues": cues.strip(),
+            "notes": notes.strip(),
+            "summary": summary.strip(),
+            "source_text": source_text.strip()[:4000],
+            "context": context.strip(),
+            "tags": tags or [],
+            "created_at": datetime.now().isoformat()
+        }
+        mem.setdefault("memos", []).insert(0, memo)
+        save_memory(mem)
+        return memo
+
+
+def search_memory(query: str, limit: int = 12) -> List[Dict[str, Any]]:
+    """Natural-language-friendly local search over memos, notes, concepts and history."""
+    stopwords = {
+        "a", "an", "and", "are", "as", "at", "be", "by", "can", "do", "for",
+        "from", "how", "in", "is", "it", "me", "my", "of", "on", "or", "that",
+        "the", "this", "to", "was", "what", "why", "with", "you"
+    }
+    terms = [
+        t.lower() for t in re.findall(r"[\w+#.-]+", query or "")
+        if len(t) > 1 and t.lower() not in stopwords
+    ]
+    if not terms:
+        terms = [t.lower() for t in re.findall(r"[\w+#.-]+", query or "") if len(t) > 1]
+    if not terms:
+        return []
+
+    phrase = " ".join(terms)
+    mem = get_memory()
+    results: List[Dict[str, Any]] = []
+
+    def score(text: str) -> int:
+        lower = (text or "").lower()
+        hits = sum(1 for term in terms if term in lower)
+        if phrase and phrase in lower:
+            hits += 3
+        return hits
+
+    for section, text_fields in (
+        ("saved_concepts", ("title", "explanation", "query", "course_or_topic", "formula")),
+        ("quick_notes", ("title", "content", "tags")),
+        ("memos", ("title", "topic", "cues", "notes", "summary", "source_text", "context", "tags")),
+        ("history", ("query", "result", "mode")),
+    ):
+        for item in mem.get(section, []):
+            values = []
+            for field in text_fields:
+                value = item.get(field, "")
+                values.append(", ".join(map(str, value)) if isinstance(value, list) else str(value))
+            text = " ".join(values)
+            hits = score(text)
+            if hits:
+                entry = dict(item)
+                entry["_section"] = section
+                entry["_score"] = hits
+                results.append(entry)
+
+    results.sort(key=lambda e: (e.get("_score", 0), str(e.get("created_at", e.get("timestamp", "")))), reverse=True)
+    return results[:limit]
+
+
 def add_history_entry(query: str, mode: str, source: str = "local", result: str = "") -> Dict[str, Any]:
     """Record every lookup/quiz in the memory vault history (most recent first)."""
     with _db_lock:
@@ -445,7 +571,7 @@ def add_history_entry(query: str, mode: str, source: str = "local", result: str 
 
 
 def delete_memory_item(section: str, item_id: str) -> bool:
-    """Delete an item from saved_concepts or quick_notes."""
+    """Delete an item from any memory section (memos, notes, concepts, history)."""
     with _db_lock:
         mem = get_memory()
         items = mem.get(section, [])
